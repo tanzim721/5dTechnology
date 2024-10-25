@@ -1,0 +1,15 @@
+.service{padding-top:150px;}
+.hardware-project img{height:300px;width:350px;}
+.hardware-project p {float: right;line-height: 1.8;width: 450px;text-align:justify;}
+.view-more-btn {background: #24b0ea none repeat scroll 0 0;color: #fff;float: right;font-weight: bold;margin-right: 330px;
+    margin-top: -220px;padding: 10px 25px;}
+
+.project-list{font-size:18px;border-left:dotted 3px #3E3387;}	
+.project-list i{padding-right:20px;padding-left:20px;}
+.project-list ul{padding:10px 0px 10px 25px;background:#E8E8FF;margin-left:20px;}
+.project-list ul li {list-style: outside none none;margin-bottom: 10px;margin-left: -24px;padding-bottom: 3px;
+    padding-top: 3px;width: 262px;}
+.project-list ul li a{text-decoration:none;font-family:Aharoni;color:#3E3387; }
+.project-list ul li:hover{background:#24B0EA;color:#fff}
+.project-list ul li:hover a{color:#fff;padding-left:5px;transition:ease .25s;-moz-transition:ease .25s;-o-transition:ease .25s;}
+.sidebar-section{margin-top:35px}
