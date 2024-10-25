@@ -34,7 +34,7 @@
 
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                     <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    <script>
+                    {{-- <script>
                         function sendmail() {
 
                             if (document.getElementById('Name').value == "") {
@@ -90,11 +90,10 @@
                                         alert('There is error at sending message. ')
 
                                     }
-
                                 }
                             );
                         }
-                    </script>
+                    </script> --}}
 
                 </div>
                 <!-- BEGAIN CONTACT MAP -->
