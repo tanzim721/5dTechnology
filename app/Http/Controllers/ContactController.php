@@ -15,11 +15,12 @@ class ContactController extends Controller
     public function submitForm(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'subject' => ['required', 'string', 'max:255'],
-            'message' => ['required', 'string'],
+            'Name' => ['required', 'string', 'max:255'],
+            'Email' => ['required', 'string', 'email', 'max:255'],
+            'Subject' => ['required', 'string', 'max:255'],
+            'Message' => ['required', 'string'],
         ]);
-        Mail::to('tanzimulislam799@gmail.com')->send(new ContactMail($request->name, $request->email, $request->subject, $request->message));
+        Mail::to('tanzimulislam799@gmail.com')->send(new ContactMail($request->all()));
+        return redirect()->back()->with('success', 'Message Sent Successfully');
     }
 }

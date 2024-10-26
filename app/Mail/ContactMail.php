@@ -34,10 +34,9 @@ class ContactMail extends Mailable
 
     public function build()
     {
-        return $this->subject($this->data['subject'])
-        ->view('contact_mail', [
-            'data' => $this->data
-        ]);
+        return $this->subject('New COntact Messgae')
+                    ->view('emails.contact')
+                    ->with('data', $this->data);
     }
 
     /**

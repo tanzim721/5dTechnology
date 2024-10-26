@@ -21,18 +21,16 @@
                         <!-- FOR CONTACT FORM MESSAGE -->
                         <div id="form-messages"></div>
 
-                        <form name="myform" action="" method="POST">
+                        <form action="" name="myform" method="POST">
+                            @csrf
                             <input class="form-control" id="Name" type="text" placeholder="Name">
-                            <input class="form-control" id="Sender" type="email" placeholder="Email">
+                            <input class="form-control" id="Email" type="email" placeholder="Email">
                             <input class="form-control" id="Subject" type="text" placeholder="Subject">
                             <textarea class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
                             <input class="submit_btn" type="submit" value="Send">
                             {{-- <button class="btn btn-primary" type="submit">Send</button> --}}
                         </form>
                     </div>
-
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
                 </div>
                 <!-- BEGAIN CONTACT MAP -->

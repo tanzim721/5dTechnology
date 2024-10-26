@@ -8,8 +8,8 @@ use App\Http\Controllers\ServiceController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
-Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+// Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
