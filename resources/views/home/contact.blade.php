@@ -21,79 +21,16 @@
                         <!-- FOR CONTACT FORM MESSAGE -->
                         <div id="form-messages"></div>
 
-                        <form name="myform" action="javascript:sendmail()" method="post">
+                        <form action="" name="myform" method="POST">
+                            @csrf
                             <input class="form-control" id="Name" type="text" placeholder="Name">
-                            <input class="form-control" id="Sender" type="email" placeholder="Email">
+                            <input class="form-control" id="Email" type="email" placeholder="Email">
                             <input class="form-control" id="Subject" type="text" placeholder="Subject">
                             <textarea class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
                             <input class="submit_btn" type="submit" value="Send">
+                            {{-- <button class="btn btn-primary" type="submit">Send</button> --}}
                         </form>
                     </div>
-
-
-
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                    <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    {{-- <script>
-                        function sendmail() {
-
-                            if (document.getElementById('Name').value == "") {
-                                alert('Name Required');
-                                return false;
-                            } else {
-                                var name = $('#Name').val();
-                            }
-
-                            if (document.getElementById('Sender').value == "") {
-                                alert('Your Email Required');
-                                return false;
-                            } else {
-                                var email = $('#Sender').val();
-                            }
-
-                            if (document.getElementById('Subject').value == "") {
-                                alert('Enter Subject');
-                                return false;
-                            } else {
-                                var subject = $('#Subject').val();
-                            }
-
-                            if (document.getElementById('Message').value == "") {
-                                alert('Enter your query');
-                                return false;
-                            } else {
-                                var message = $('#Message').val();
-                            }
-
-
-                            // var body = $('#body').val();
-
-                            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
-                            //console.log(name, phone, email, message);
-
-                            Email.send({
-                                SecureToken: "bb2c65d6-5987-4835-9d83-e638f7af0dc2",
-                                Host: "smtp.gmail.com",
-                                Username: "info.fivedtech@gmail.com",
-                                Password: "flsjgazgbpegpvna",
-                                To: 'tanzimulislam799@gmail.com',
-                                From: "iamtanzim36@gmail.com",
-                                Subject: "New message on contact from " + name,
-                                Body: Body
-                            }).then(
-                                message => {
-                                    //console.log (message);
-                                    if (message == 'OK') {
-                                        alert('Your mail has been sent successfully.');
-                                    } else {
-                                        console.error(message);
-                                        alert('There is error at sending message. ')
-
-                                    }
-                                }
-                            );
-                        }
-                    </script> --}}
 
                 </div>
                 <!-- BEGAIN CONTACT MAP -->
