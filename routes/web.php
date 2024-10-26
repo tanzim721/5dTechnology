@@ -12,7 +12,7 @@ Route::get('/service', [ServiceController::class, 'index'])->name('service');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return "hello";
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
