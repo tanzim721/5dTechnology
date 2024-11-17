@@ -17,7 +17,7 @@
             <h2 class="h5 no-margin-bottom">Dashboard</h2>
           </div>
         </div>
-        @include('admin.layouts.content')
+        @yield('content')
 
         @include('admin.layouts.footer')
       </div>

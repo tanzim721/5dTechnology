@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
@@ -13,10 +14,12 @@ Route::get('/service', [ServiceController::class, 'index'])->name('service');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact');
 
 // Route::get('/dashboard', function () {
-//     return view
-// })->middleware(['auth', 'verified'])->name('dashboard');
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
     Route::resource('/admin/product', ProductController::class);
 });
 
