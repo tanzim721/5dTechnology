@@ -10,4 +10,16 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
+    public function ContactStore(Request $request)
+    {
+        dd($request->all());
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+
+    }
 }
