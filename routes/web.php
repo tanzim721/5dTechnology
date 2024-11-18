@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactEmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
@@ -11,7 +13,7 @@ use App\Http\Controllers\Admin\DashboardController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
 // Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
-Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact');
+// Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -21,6 +23,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('/admin/product', ProductController::class);
+
+});
+Route::get("/contact", function(){
+    // $name = "Tanzimul Islam";
+    Mail::to("mailtrapclub@gmail.com")->send(new ContactEmail());
+    return "Email sent!";
 });
 
 Route::middleware('auth')->group(function () {
