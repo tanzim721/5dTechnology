@@ -6,8 +6,6 @@
 
 </head>
 
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
@@ -162,13 +160,12 @@
                             <!-- FOR CONTACT FORM MESSAGE -->
                             <div id="form-messages"></div>
 
-                            <form action="{{ route('contact.store') }}" method="POST"
-                                class="contact-form" enctype="multipart/form-data">
+                            <form action="{{ route('contact.store') }}" method="POST" class="contact-form" enctype="multipart/form-data">
                                 @csrf
-                                <input class="form-control" id="Name" type="text" placeholder="Name">
-                                <input class="form-control" id="Email" type="email" placeholder="Email">
-                                <input class="form-control" id="Subject" type="text" placeholder="Subject">
-                                <textarea class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                <input class="form-control" id="Name" name="name" type="text" placeholder="Name">
+                                <input class="form-control" id="Email" type="email" name="email" placeholder="Email">
+                                <input class="form-control" id="Subject" type="text" name="subject" placeholder="Subject">
+                                <textarea class="form-control" id="Message" name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                                 <input class="submit_btn" type="submit" value="Send">
                             </form>
                         </div>
