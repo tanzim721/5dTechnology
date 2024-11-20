@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::post('/store', [HomeController::class, 'ContactStore'])->name('contact.store');
+Route::post('/', [HomeController::class, 'ContactStore'])->name('contact.store');
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
 
 // Route::get('/dashboard', function () {
