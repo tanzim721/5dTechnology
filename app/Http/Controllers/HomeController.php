@@ -12,7 +12,7 @@ class HomeController extends Controller
     }
     public function ContactStore(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'required',
