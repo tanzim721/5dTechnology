@@ -160,7 +160,7 @@
                             <!-- FOR CONTACT FORM MESSAGE -->
                             <div id="form-messages"></div>
 
-                            <form action="{{ route('contact.store') }}" method="POST" class="contact-form" enctype="multipart/form-data">
+                            <form action="" method="POST" class="contact-form" enctype="multipart/form-data">
                                 @csrf
                                 <input class="form-control" id="Name" name="name" type="text" placeholder="Name">
                                 <input class="form-control" id="Email" type="email" name="email" placeholder="Email">
